@@ -1,4 +1,19 @@
-//  Primitive
+
+// there are many basis on which answer to the question "type of javascript" can be given
+// but mainly there are two data-types
+// 1. Primitive   
+// 2. Non premitive 
+
+// In industry we answer this question on the basis of "call by value" and "call by reference"
+// The way they store data and we can assess the data if the basis of categorization of data types
+
+
+
+
+
+
+//  Primitive : these are call by value
+// the copy of data is passes not the reference 
 
 //  7 types : String, Number, Boolearn, null, undefined, Symbol, BigInt
 
@@ -18,7 +33,8 @@ console.log(id === anotherId);
 
 
 
-// Reference (Non primitive)
+// Reference (Non primitive) : these are called by reference 
+// meaing the address or the reference is passed not the value
 
 // Array, Objects, Functions
 
@@ -87,3 +103,13 @@ console.log(" changed : " + userOne.email)
 console.log(" changed : " + userTwo.email)
 
 
+// ____________________________________________________________________________________________________________
+
+// Javascript is Statically typed of Dynamically typed ?
+
+/*
+    In any language if we have to mention the data type of variables while creating it then language it statically typed
+    eg: c++, C, Java, etc..
+
+    When we don't need to mention the data type while creating the variable 
+*/
