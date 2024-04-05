@@ -57,6 +57,18 @@ console.log("1" + "2")
 console.log(1+2+3)
 console.log(1 + 2 + "3")
 
+// but confusin Occures when we do this
+console.log( "1" + 2 + 2) 
+
+// this happens due to the rules in javascript
+// if first term is string then all other term be it numebr or string they will concatinate as string 
+// But if the firts term is number then other term if numebr will be added and if string then will be concatinated 
+
+
+let num1, num2, num3, num4;
+num1 = num2= num3 = num4 = 4+7;
+// But this is not a good practice 
+
 console.log((3+4) * 5%3)
 
 console.log( + true)
