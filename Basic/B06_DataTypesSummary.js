@@ -22,12 +22,22 @@ const scoreValue = 100.3
 
 const isLoggedIn = false
 const outsideTemp = null
-let userEmail;
+
+let userEmail; // This  is for now undefined
+//  we can execlusively define it undefined also but does not makes any sense
+
 
 const id = Symbol('123')
 const anotherId = Symbol('123')
 
 console.log(id === anotherId);
+// Symbol ke case me humlog chahe same name se do alag symbol ko bna le tab v wo unique hi rhega
+// eg :
+// const mike = Symbol('23')
+// const miketyson =Symbol('34')
+
+// console.log( mike === miketyson);
+
 
 // const bigNumber = 3456543576654356754n
 
@@ -38,17 +48,29 @@ console.log(id === anotherId);
 
 // Array, Objects, Functions
 
+// Array
 const heros = ["shaktiman", "naagraj", "doga"];
+
+// objects : the are inside the curley brackets 
 let myObj = {
     name: "hitesh",
     age: 22,
 }
 
+// function : value stored in variable 
 const myFunction = function(){
     console.log("Hello world");
 }
 
-console.log(typeof anotherId);
+
+// TO get the data type of any variable we can use typeof
+console.log(typeof anotherId); // output is Symbol
+
+
+// lets check the data type of non primitve datatype
+console.log(typeof heros); // Array is giving object 
+console.log(typeof myObj); // object is of object type 
+console.log(typeof myFunction); // function or object function 
 
 // https://262.ecma-international.org/5.1/#sec-11.4.3
 
@@ -113,3 +135,5 @@ console.log(" changed : " + userTwo.email)
 
     When we don't need to mention the data type while creating the variable 
 */
+
+
