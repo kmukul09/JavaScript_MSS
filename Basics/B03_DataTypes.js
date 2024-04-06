@@ -46,3 +46,7 @@ console.log(typeof undefined); // we get undefined as its type
 
 // ________________________________________________________ That's all for today _______________________________________________ 
 
+
+
+
+
