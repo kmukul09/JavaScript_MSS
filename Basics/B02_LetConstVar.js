@@ -15,6 +15,7 @@ accountCity = "Muzaffarpur"
 isloggedin = false
 
 
+
 // lets try to know the type of variables
 /*
 console.log(typeof(accountId))
