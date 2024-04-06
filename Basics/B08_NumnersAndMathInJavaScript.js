@@ -79,4 +79,3 @@ console.log(Math.random()); // But we want integer greater than minimum value
 console.log(Math.random()*(max-min+1)); // we want floor value here 
 console.log(Math.floor(Math.random()*(max-min+1))); // it is smaller than Min value
 console.log(Math.floor(Math.random()*(max-min+1))+min); // Now good
-
