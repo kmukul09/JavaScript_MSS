@@ -14,7 +14,7 @@ console.log(`My name is ${name} and my age is ${repoCount} and I am biggner`);
 // Let's create object of String 
 
 const gameName = new String('MukulMss') // Put this in console of the WebBrowser you will get the of all functions 
-
+console.log(typeof gameName); // object 
 // Actually knowing all these string functions is mastring the string 
 console.log(gameName[0]);
 console.log(gameName.length);
