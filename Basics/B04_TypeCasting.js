@@ -79,3 +79,4 @@ console.log(+" ")
 let gamecounter = 100
 gamecounter++
 console.log(gamecounter) // icremented by 1
+
