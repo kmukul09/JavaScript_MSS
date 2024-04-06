@@ -29,3 +29,6 @@ console.log(undefined < 0);
 // === 
 // this is strict check even looks for data type match 
 console.log("2" === 2);
+
+
+
