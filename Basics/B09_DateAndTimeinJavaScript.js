@@ -49,6 +49,9 @@ console.log(date1.getMonth());
 console.log(date1.getFullYear());
 
 // for more customization we can use localString method
+/*
 newDate.toLocaleString('default',{
     weekday : "long",
 })
+*/
+
