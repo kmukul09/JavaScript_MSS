@@ -15,3 +15,7 @@ if(balance>500) console.log("test"), console.log("DontUseMultipleLinesThisWay");
 
 // we can use if else if and else to check multiple conditions 
 // nested loops also are there
+
+// Terniary Operator 
+
+// condition ? true: false;
