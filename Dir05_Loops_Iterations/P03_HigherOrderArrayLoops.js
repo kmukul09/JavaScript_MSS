@@ -92,13 +92,39 @@ const tempArr = ["Py", "RB", "Java", "cpp", "HTML", "XML"];
 
 // now loop
 for( const key in tempArr){
-    console.log(key);
+    // console.log(key);
 }
 // it gave output as index of the elements in array 
 
 // so yahan v wahi object wala style 
 for(const key in tempArr){
-    console.log(tempArr[key]);
+    // console.log(tempArr[key]);
 }
 
 // Can we use for in on maps ? : No because maps are not itratable 
+
+
+// Foreach in js: A higher order loop
+
+const tempArr1 = ["Py", "RB", "Java", "cpp", "HTML", "XML"];
+
+// we can access the forEach function
+// array.forEach (  we give a ("CallBack Function") fucntion as parameter )
+// ye call back function kya hota hai : Just normal function but this function does not have a name
+
+// function name() {} here remove the name and put just function(){}
+// also pass 'any name for itrator'
+
+
+tempArr1.forEach( function (item) {
+    console.log(item);
+} );
+
+
+
+// now let's see how arrow function works just dont write "function" and 
+
+tempArr1.forEach( (item) => {
+    console.log(item)
+})
+
