@@ -117,7 +117,7 @@ const tempArr1 = ["Py", "RB", "Java", "cpp", "HTML", "XML"];
 
 
 tempArr1.forEach( function (item) {
-    console.log(item);
+    // console.log(item);
 } );
 
 
@@ -125,6 +125,58 @@ tempArr1.forEach( function (item) {
 // now let's see how arrow function works just dont write "function" and 
 
 tempArr1.forEach( (item) => {
-    console.log(item)
+    // console.log(item)
 })
 
+// let's make it more interesting 
+
+// create a function 
+function printme(item){
+    // console.log(item);
+}
+
+// now can we pass this function as call back function : Yes
+
+// tempArr1.forEach(printme('item')); // nhi chlega because callback function ka reference dena hai usko execute nhi karna hai 
+
+// tempArr1.forEach(printme); // this worked correctly 
+
+
+// --->> coming back to our array and arrow function as callback function 
+tempArr1.forEach((item, index, arr) => {
+    console.log( item , index, arr);
+})
+
+// our callback function can not only take item as parameter but also can take many usefull parameters as index, arr, etc.
+
+ 
+// nor let's create an array with object inside it 
+
+const protoArrayOfObj = [
+    {
+        languageName : "JavaScript",
+        sign : "js"
+    }
+    ,
+    {
+        languageName : "C++",
+        sign : "CPP"
+    }
+    ,
+    {
+        languageName : "Python",
+        sign : "py"
+    }
+];
+
+// now to itrate over this loop we can use forEach loop 
+
+protoArrayOfObj.forEach( (item) => {
+    console.log(item['languageName'], item['sign']);
+}) 
+
+protoArrayOfObj.forEach( (item) => {
+    console.log(item.languageName, item.sign);
+}) 
+
+// more to go in next 
