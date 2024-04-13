@@ -52,3 +52,5 @@ myNumarr.forEach((num) => {
 
 // check the result array 
 console.log(result);
+
+// you can use any as you please 
