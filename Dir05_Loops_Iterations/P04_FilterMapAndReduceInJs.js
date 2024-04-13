@@ -32,6 +32,23 @@ console.log(newNums);
 */
 
 // so this other way is here 
+/*
 const newnumsArr = myNumarr.filter( (num) =>  { return num > 4 }) // arrow function 
 console.log(newnumsArr);
+*/
 
+// now if we want ki nhi hum toh forEach se hi return krwaynge then : it is programming 
+// we can do anything 
+
+// first make an empty array 
+const result = [];
+
+//now use forEach
+myNumarr.forEach((num) => {
+    if(num > 4){
+        result.push(num);
+    }
+}) 
+
+// check the result array 
+console.log(result);
