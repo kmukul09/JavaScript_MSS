@@ -24,6 +24,7 @@ const myNumarr = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 // esme v call back funtion hi dalte hai 
 /*
 const newNums = myNumarr.filter( (num) => num > 4 ); 
+
 // yahan agr call back function ki trh curley bracket me daloge the problem hogi
 // scopes ki batt rkte hu huy btaya tha that agr apne curley bracket lga dia toh apko return likhna pdega or nhi lgaya hai toh simple on line wale function chal zaynge 
 // ye filter out krta hai based on some condtion and if condition is not complex then it is good to write it in one line 
@@ -143,10 +144,10 @@ console.log(res);
 let numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
 
 const outputarr = numbers
-    .map((nums) => { return nums*10; })
-    .map((nums) => { return nums+1; })
-    .filter((nums) => {return nums > 41; });
-    
+    .map((nums) => { return nums * 10; })
+    .map((nums) => { return nums + 1; })
+    .filter((nums) => { return nums > 41; });
+
 console.log(outputarr);
 
 // we chain more methods to it 
@@ -155,7 +156,7 @@ console.log(outputarr);
 
 // reduce method 
 
-const myNums = [1,2,3,4,5,6,7,8,9,10]
+const myNums = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
 
 /*
 let initialValue = 0;
@@ -175,8 +176,8 @@ console.log(finalValue);
 
 let initialValue = 67;
 
-const finalValue = myNums.reduce( 
-    (accumulator, currentValue) => accumulator + currentValue, initialValue )
+const finalValue = myNums.reduce(
+    (accumulator, currentValue) => accumulator + currentValue, initialValue)
 
 console.log(finalValue);
 
@@ -185,7 +186,7 @@ console.log(finalValue);
 // readable code 
 
 let initial = 90;
-const finalval = myNums.reduce(function (acc, curr)  { return acc + curr} , 0)
+const finalval = myNums.reduce(function (acc, curr) { return acc + curr }, 0)
 console.log(finalval);
 
 // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -209,5 +210,5 @@ const shoppingCart = [
     },
 ]
 
-const priceToPay = shoppingCart.reduce((total , course) => {return total + course.price}, 0)
+const priceToPay = shoppingCart.reduce((total, course) => { return total + course.price }, 0)
 console.log(priceToPay);
