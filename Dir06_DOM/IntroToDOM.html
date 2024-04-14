@@ -4,11 +4,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>DOM learning</title>
+    <style>
+        .bg-black{
+            background-color: #212121;
+            color: #fff;
+        }
+    </style>
 </head>
-<body>
+<body class = "bg-black">
 
-    <div class = "Bg-black">
-        <h1 class = "heading "> DOM learning in chai aur code </h1>
+    <div >
+        <h1 id = "title" class = "heading"> DOM learning in chai aur code </h1>
         <p>Lorem ipsum dolor sit amet.</p>
     </div>
 
@@ -28,11 +34,70 @@
             ya nhi jani chahiye ye saab event handling me seekhenge 
 
         
-        Extra : console me execute kiy gye kuch lines 
-                1. console.log(window);
-                2. console.log(window.document);
-                3. console.dir(document);
+        
      -->
     
 </body>
 </html>
+
+<!-- 
+    after this we moved to console on browser and there we performed few operations
+    1. console.
+-->
+
+
+
+<!-- 
+Extra : console me execute kiy gye kuch lines 
+    1. console.log(window);
+    2. console.log(window.document);
+    3. console.dir(document);
+    
+console.log(document.links);
+console.log(document.links[3]);
+    VM698:1 <a href=​"/​wiki/​Portal:​Current_events" title=​"Articles related to current events">​flex<span>​Current events​</span>​</a>​
+    undefined
+// output is not array it is HTML collection we can get is as array for uses 
+    undefined
+
+// can use follwing method to get informations: 
+document.getElementById('firstHeading');
+    <h1 id=​"firstHeading" class=​"firstHeading mw-first-heading">​<span class=​"mw-page-title-main">​Brendan Eich​</span>​</h1>​
+
+
+document.getElementById('firstHeading').innerHTML = "<h1> Mukul Shandilya </h1>";
+    '<h1> Mukul Shandilya </h1>'
+ -->
+
+
+
+
+<!-- 
+    
+    document.getElementById('title');
+    <h1 id=​"title" class=​"heading">​ DOM learning in chai aur code ​</h1>​
+    
+    document.getElementsByClassName('heading');
+
+    document.getElementById('title').id;
+        'title'
+    
+    document.getElementsByClassName('heading').className;
+        undefined
+
+    document.getElementsByClassName('heading').className;
+        undefined
+
+    document.getElementsByClassName('heading');
+        HTMLCollection [h1#title.heading, title: h1#title.heading]0: h1#title.headingtitle: h1#title.headinglength: 1[[Prototype]]: HTMLCollection
+
+    document.getElementById('title').className;
+        'heading'
+
+    document.getElementsByClassName('heading').id;
+        undefined
+
+    document.getElementsByClassName('heading');
+        HTMLCollection [h1#title.heading, title: h1#title.heading]0: h1#title.headingtitle: h1#title.headinglength: 1[[Prototype]]: HTMLCollection
+
+ -->
