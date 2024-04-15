@@ -14,8 +14,19 @@
 <body class = "bg-black">
 
     <div >
-        <h1 id = "title" class = "heading"> DOM learning in chai aur code </h1>
-        <p>Lorem ipsum dolor sit amet.</p>
+        <h1 id = "title" class = "heading"> DOM learning in chai aur code <span style = "display: none;"> test text </span> </h1>
+        <h2>Lorem ipsum dolor sit.</h2>
+        <h2>Lorem ipsum dolor sit.</h2>
+        <h2>Lorem ipsum dolor sit.</h2>
+        <p> Lorem ipsum dolor sit amet. </p>
+        <input type="password", name="PassWord", id="Pw1">
+        
+        <ul>
+            <li>One</li>
+            <li>Two</li>
+            <li>Three</li>
+            <li>Four</li>
+        </ul>
     </div>
 
     <!-- 
@@ -101,3 +112,121 @@ document.getElementById('firstHeading').innerHTML = "<h1> Mukul Shandilya </h1>"
         HTMLCollection [h1#title.heading, title: h1#title.heading]0: h1#title.headingtitle: h1#title.headinglength: 1[[Prototype]]: HTMLCollection
 
  -->
+
+ <!-- 
+    1. document.getElementById('title').innerHTML; : 
+        ' DOM learning in chai aur code '
+
+    2. You can ask for attribute using attribute function
+    -> document.getElementById('title').getAttribute('class');
+        "heading"
+
+    3. If we want to set any attribute ( Meaing overwrite the attribute) then we can do it by using setAttribute
+    -> document.getElementById('title').setAttribute('class', 'test');  // "class" is attribute and "test" is value.
+        undefined : but changes will reflect in source code 
+
+    4. We have this title with all the styling that we did and all kinds of changes But now we also want to find some values out of this 
+       now if we want to extract content from title then we use various methods and few of those methods 
+    -> title.textContent;
+        ' DOM learning in chai aur code '
+
+    -> title.innerText;
+        ' DOM learning in chai aur code '
+
+    -> title.innerHTML;
+        ' DOM learning in chai aur code '
+
+    -> title.textContent;
+        ' DOM learning in chai aur code  test text  '
+    -> title.innerHTML
+        ' DOM learning in chai aur code <span style="display: none;"> test text </span> '
+    -> title.innerText;
+        'DOM learning in chai aur code'
+
+    now none of these are wrong and it totally depends on use case agr apko complete text ki jarurat 
+    hai then use tectContent and if jitna show ho rha hai utne se hi kam hai then use innerText
+    
+
+  -->
+
+
+  <!-- 
+
+    // Query Selectors in JavaScript
+
+    -> document.querySelector('#title');
+        it returns the first query based on the asked query
+    -> document.querySelector('.heading');
+
+    -> document.querySelector('.heading');
+
+    // people like this because css ke query yahan asani se select kar skte hai 
+    
+    // Assume you were to select input element and you wanted to assess any attribute of input element
+
+    // kyuki humare pass input field nhi hai that's why we cannot select the query 
+    -> document.querySelector('input[type = "PassWord"]');
+
+    -> document.querySelector('input[type="password"]');
+        <input type=​"password" , name=​"PassWord" id=​"Pw1">​
+    
+    -> document.querySelector('p:first-child');
+        null
+   
+   -->
+
+
+
+   <!-- 
+
+    // we have a unordered list now can we select the ul or its attribute or the complete list 
+    -> document.querySelector('ul');
+
+    // store it in a variable 
+    -> const myul = document.querySelector('ul');
+
+    -> myul
+        <ul>​…​</ul>​<li>​…​</li>​<li>​…​</li>​<li>​…​</li>​<li>​…​</li>​</ul>​
+    
+    -> typeof myul;
+        'object'
+
+    // ab kyuki myul is an object we can perform many operation on it of styling or manipulating 
+    
+    // app myul se v query Select kar skte ho 
+    
+    -> myul.querySelector('li');
+        <li>​…​</li>​::marker​"One"</li>​
+
+    // we can store this one query into some variable 
+
+    -> const turnGreen = myul.querySelector('li');
+
+    //since now turnGreen is an object we can style it the way we did with header
+
+    -> turnGreen.style.backgroundColor = "Green";
+        'Green'
+
+    -> turnGreen.style.backgroundColor = "Wihte";
+        'Wihte'
+
+    -> turnGreen.style.backgroundColor = "white";
+        'white'
+
+    -> turnGreen.style.backgroundColor = "Green";
+        'Green'
+
+    -> turnGreen.style.padding = "7px";
+        '7px'
+    
+    -> turnGreen.innerText;
+        'One'
+
+    -> turnGreen.innerText = "Hraa rang hai hari humari dharti ki angrai" ;
+        'Hraa rang hai hari humari dharti ki angrai'
+
+
+
+
+
+    -->
