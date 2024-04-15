@@ -1,31 +1,34 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>DOM learning</title>
     <style>
-        .bg-black{
+        .bg-black {
             background-color: #212121;
             color: #fff;
         }
     </style>
 </head>
-<body class = "bg-black">
 
-    <div >
-        <h1 id = "title" class = "heading"> DOM learning in chai aur code <span style = "display: none;"> test text </span> </h1>
+<body class="bg-black">
+
+    <div>
+        <h1 id="title" class="heading"> DOM learning in chai aur code <span style="display: none;"> test text </span>
+        </h1>
         <h2>Lorem ipsum dolor sit.</h2>
         <h2>Lorem ipsum dolor sit.</h2>
         <h2>Lorem ipsum dolor sit.</h2>
         <p> Lorem ipsum dolor sit amet. </p>
-        <input type="password", name="PassWord", id="Pw1">
-        
+        <input type="password" , name="PassWord" , id="Pw1">
+
         <ul>
-            <li>One</li>
-            <li>Two</li>
-            <li>Three</li>
-            <li>Four</li>
+            <li class="list-item">One</li>
+            <li class="list-item">Two</li>
+            <li class="list-item">Three</li>
+            <li class="list-item">Four</li>
         </ul>
     </div>
 
@@ -47,8 +50,9 @@
         
         
      -->
-    
+
 </body>
+
 </html>
 
 <!-- 
@@ -113,7 +117,7 @@ document.getElementById('firstHeading').innerHTML = "<h1> Mukul Shandilya </h1>"
 
  -->
 
- <!-- 
+<!-- 
     1. document.getElementById('title').innerHTML; : 
         ' DOM learning in chai aur code '
 
@@ -150,7 +154,7 @@ document.getElementById('firstHeading').innerHTML = "<h1> Mukul Shandilya </h1>"
   -->
 
 
-  <!-- 
+<!-- 
 
     // Query Selectors in JavaScript
 
@@ -177,7 +181,7 @@ document.getElementById('firstHeading').innerHTML = "<h1> Mukul Shandilya </h1>"
 
 
 
-   <!-- 
+<!-- 
 
     // we have a unordered list now can we select the ul or its attribute or the complete list 
     -> document.querySelector('ul');
@@ -225,8 +229,144 @@ document.getElementById('firstHeading').innerHTML = "<h1> Mukul Shandilya </h1>"
     -> turnGreen.innerText = "Hraa rang hai hari humari dharti ki angrai" ;
         'Hraa rang hai hari humari dharti ki angrai'
 
-
-
-
-
     -->
+
+<!-- 
+
+        // QuerySelectorAll
+
+        // humen dekha ki querySelector kyse kaam keta hai and ab hum dekhnege ki query Selector All kyse kaam krta hai 
+
+        // we are getting a node list and there is a difference between a nodelist and array you can see the difference 
+           by going through the prototypes of node list you will not find "map()" prototype 
+
+        // It is not arrya but it is also  not much different form array 
+
+        // we can style differnet element differently let's see how 
+
+
+        -> const tmepLiList = document.querySelectorAll('li');
+
+        -> tmepLiList;
+            NodeList(4) [li, li, li, li]0: li1: li2: li3: lilength: 4[[Prototype]]: NodeList
+
+        -> tmepLiList[1];
+            <li>​…​</li>​::marker​"Two"</li>​
+
+        -> tmepLiList[1].style.color = "white";
+            'white'
+
+        -> tmepLiList[2].style.color = "blue";
+            'blue'
+
+        -> tmepLiList[3].style.color = "red";
+            'red'
+
+        -> tmepLiList[0].style.color = "black";
+            'black'
+
+        -> tmepLiList[1].style.color = "#f4c430";
+            '#f4f430'
+
+        -> tmepLiList[2].style.color = "white";
+            'white'
+
+        -> tmepLiList[3].style.color = "green";
+            'green'
+
+
+        // array zysa dikhta hui but array hai nhi pa array se kafi milti hai eski khubiyan 
+
+
+
+        // agr main ye try karu that main heading ka color change kar du but wihtout using indexing 
+           because bas ek hi element hai then it is not going to be possible 
+
+        -> tmepLiList;
+
+        -> tmepLiList.forEach( (item) => {
+            item.style.backgroundColor = "grey";
+           })
+
+        -> tmepLiList.forEach( (item) => {
+            item.style.backgroundColor = "grey", item.style.padding = "20px", item.style.borderRadius = "25px";
+           })
+        
+        
+
+
+
+
+        // ab smjhte hai ki htmlList kya hota hai hai how it is differemt from nodelist and array 
+
+        -> document.getElementsByClassName('list-item');
+            HTMLCollection(4) [li.list-item, li.list-item, li.list-item, li.list-item]
+
+        // we can see we got a HTML collection and it is very much different from nodeList and array 
+        // let's store it in some variable and test it on array parameters 
+        // const myclasslist = document.getElementsByClassName('list-item');
+
+        -> myclasslist
+            HTMLCollection(4) [li.list-item, li.list-item, li.list-item, li.list-item]
+
+        // it is a html collection and kyuki ye html collection hai hum isko array ki rh toh bilkul v treat 
+           nhi kar skte hai as eske prototypes me na map hai or nahi other methods. let's try for each loop on it 
+
+        -> myclasslist.forEach( (item) => {
+            console.log( item );
+           })
+
+        // output is that there is no for each function for html collection. then how do handle and use it for our 
+           own good : and answer is Convert it into arrya ;
+        // use a method from = Array.from(myclasslist)
+
+        -> const myconvertedArray = Array.from(myclasslist);
+        
+        -> myconvertedArray;
+            (4) [li.list-item, li.list-item, li.list-item, li.list-item]
+
+        // now this an array and we can populate over it 
+
+        -> const myclasslist = document.getElementsByClassName('list-item');
+
+        -> const myconvertedArray = Array.from(myclasslist);
+
+        -> myconvertedArray
+            (4) [li.list-item, li.list-item, li.list-item, li.list-item]
+
+        -> myconvertedArray.forEach( (item) => {
+            item.style.color = "orange";
+           });
+
+
+        // Few practical example
+
+        -> document.querySelectorAll('h3');
+
+        -> const allh3 = document.querySelectorAll('h3');
+        -> allh3.innerText;
+        -> allh3.textContent;
+        -> document.querySelectorAll('.mw-headline');
+
+        // store it in a new variable 
+
+        -> const listOfClass = document.querySelectorAll('.mw-headline');
+
+        -> listOfClass[0].innerText;
+
+        // turn every h2 heading green 
+
+        -> listOfClass.forEach((item) => {
+            item.style.backgroundColor = "pink";
+           });
+
+        -> listOfClass.forEach((item) => {
+            item.style.backgroundColor = "pink",
+            item.style.padding = "10px",
+            item.innerText = "Mukul";
+           });
+
+
+        // abhi hum ye saab console ke andar akr rhe hia but in a project hum ye saab ka script tag ke andar krege 
+
+     -->
